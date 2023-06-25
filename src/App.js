@@ -1,8 +1,11 @@
 import logo from "./logo.svg";
+import React, { Component } from "react";
 import "./App.css";
 
-function App() {
-  return <div class="app">hello!</div>;
+class App extends Component {
+  render() {
+    return <div class="app">hello! React!</div>;
+  }
 }
 
 export default App;
