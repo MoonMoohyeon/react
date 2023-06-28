@@ -30,12 +30,15 @@ class App extends Component {
     }
     return (
       <div class="app">
-        {/* <Subject
+        <Subject
           title={this.state.subject.title}
           sub={this.state.subject.sub}
-        ></Subject> */}
+          onChangePage={function () {
+            this.setState({ mode: "welcome" });
+          }.bind(this)}
+        ></Subject>
         {/* <Subject title="React" sub="For  UI"></Subject> */}
-        <header>
+        {/* <header>
           <h1>
             <a
               href="/"
@@ -54,7 +57,7 @@ class App extends Component {
             </a>
           </h1>
           {this.state.subject.sub}
-        </header>
+        </header> */}
         <TOC data={this.state.contents}></TOC>
         <Content title={_title} desc={_desc}></Content>
       </div>
